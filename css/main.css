@@ -1,0 +1,2197 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #B8FFFD;
+    text-shadow: none;
+}
+
+::selection {
+    background: #B8FFFD;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+*, 
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*IE10 scaling fix*/
+@-ms-viewport {
+    width: device-width;
+}
+
+@font-face {
+    font-family: 'Knockout-HTF29-JuniorLiteweight';
+    src: url('fonts/knockout-htf29-juniorliteweight.eot');
+    src: url('fonts/knockout-htf29-juniorliteweight.eot?#iefix') format('embedded-opentype'),
+         url('fonts/knockout-htf29-juniorliteweight.woff') format('woff'),
+         url('fonts/knockout-htf29-juniorliteweight.ttf') format('truetype'),
+         url('fonts/knockout-htf29-juniorliteweight.svg#knockout-htf29-juniorliteweight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Knockout-HTF32-JuniorCruiserwt';
+    src: url('fonts/knockout-htf32-juniorcruiserwt.eot');
+    src: url('fonts/knockout-htf32-juniorcruiserwt.eot?#iefix') format('embedded-opentype'),
+         url('fonts/knockout-htf32-juniorcruiserwt.woff') format('woff'),
+         url('fonts/knockout-htf32-juniorcruiserwt.ttf') format('truetype'),
+         url('fonts/knockout-htf32-juniorcruiserwt.svg#knockout-htf32-juniorcruiserwt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'icons';
+    src:url('fonts/icons.eot');
+    src:url('fonts/icons.eot?#iefix') format('embedded-opentype'),
+        url('fonts/icons.svg#icons') format('svg'),
+        url('fonts/icons.woff') format('woff'),
+        url('fonts/icons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: 'icons';
+    font-style: normal;
+    speak: none;
+    font-weight: normal;
+    /*line-height: 1;*/
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: 'Knockout-HTF32-JuniorCruiserwt';
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: 1.0625em; /*17/16*/
+    line-height: 1;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.375em; /*22/16*/
+    font-weight: normal;
+    color: #669999;
+    margin: 0;
+    line-height: 1;
+}
+
+h3 {
+    font-size: 1.0625em; /*17/16*/
+    font-weight: normal;
+    color: #669999;
+    margin: 0;
+    line-height: 1.1;
+}
+
+/*Preloader*/
+
+.js body{
+    display: none;
+}
+
+/*.js .body-secondary {
+    zoom: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}*/
+
+#jpreOverlay {
+  background-color: #fff;
+}
+
+#jpreLoader{
+  width: 100%;
+  height: 2px;
+}
+
+#jpreBar {
+  background-color: #000;     
+}
+
+/*Main Nav*/
+
+header {
+    position: relative;
+    z-index: 9;
+}
+
+.touch #body-home header {
+    display: block!important;
+}
+
+nav a {
+    font-family: 'Knockout-HTF29-JuniorLiteweight';
+    font-size: 1.0625em; /* 17/16 */     
+    text-transform: uppercase;
+}
+
+nav ul {
+    padding: 0;        
+}
+
+.nav-main {
+    margin: 1.5625em 0 0 1.4375em; /* 25/16 23/16 */
+}
+
+.nav-main li {
+  float: left;
+}
+
+.cube-nav {
+    position: relative;
+    text-align: right;    
+    width: 162px;
+    height: 38px;    
+    display: block;
+    margin-right: 0.625em; /* 10/16 */
+    padding: 0.84em 1.25em 0 0;    
+    background: url('../img/nav-large.svg') no-repeat center center;
+}
+
+.no-inlinesvg .cube-nav {
+    background: url('../img/nav-large.png') no-repeat center center;    
+}
+
+.cube-nav:hover {
+    background: url('../img/nav-large.svg') no-repeat top center;
+    padding: 0.57em 0.875em 0 0; /* /16 14/16 */    
+}
+
+.no-inlinesvg .cube-nav:hover {
+    background: url('../img/nav-large.png') no-repeat top center;
+}
+
+.cube-nav:active {
+    background: url('../img/nav-large.svg') no-repeat bottom center;
+    color: #fff;    
+}
+
+.no-inlinesvg .cube-nav:active {
+    background: url('../img/nav-large.png') no-repeat bottom center;
+}
+
+nav .active,
+.nav-footer .active {
+    background: url('../img/nav-large.svg') no-repeat bottom center;
+    padding: 0.57em 0.875em 0 0; /* 11/16 14/16 */    
+    color: #fff;    
+}
+
+.no-inlinesvg nav .active,
+.no-inlinesvg .nav-footer .active {
+    background: url('../img/nav-large.png') no-repeat bottom center;  
+}
+
+nav .active:hover,
+.nav-footer .active:hover {
+    background: url('../img/nav-large.svg') no-repeat bottom center;
+    color: #fff;    
+}
+
+.no-inlinesvg nav .active:hover,
+.no-inlinesvg .nav-footer .active:hover {
+    background: url('../img/nav-large.png') no-repeat bottom center;
+}
+
+.search-toggle {
+    padding-right: 2.545em;
+}
+
+.search-toggle:hover{
+    padding-right: 2.17em;
+}
+
+nav .active.search-toggle {
+    padding-right: 2.17em;  
+}
+
+/*fade main content on dropdown*/
+.main-fade {
+    zoom: 1;
+    filter: alpha(opacity=15);
+    opacity: 0.15;
+}
+
+nav b {
+    position: absolute;
+    display: block;
+    
+    /*triangle*/
+    top: 1.35em;
+    left: 7.5em;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 7px 7px 0 7px;
+    border-color: #000000 transparent transparent transparent;    
+}
+
+nav a:hover b {
+    top: 1.05em;
+    left: 7.9em;    
+}
+
+nav .active b {
+    top: 1.05em;
+    left: 7.9em;
+    border-color: #fff transparent transparent transparent;     
+    -webkit-transform: rotate(180deg); 
+       -moz-transform: rotate(180deg); 
+        -ms-transform: rotate(180deg); 
+         -o-transform: rotate(180deg); 
+            transform: rotate(180deg);  
+}
+
+/*mobile menu*/
+.mobile-toggle {
+    display: none; 
+}
+
+/*Secondary Nav*/
+
+.search,
+.search-industry,
+.search-clients,
+.search-effects {
+    display: none;
+    margin: 1em 0 0 4em;
+    position: absolute;
+    z-index: 2;
+}
+
+.portfolio.search,
+.search-industry,
+.search-clients,
+.search-effects {
+    display: none;
+    margin: 1em 0 0 4em;
+    position: absolute;
+    z-index: 2;
+}
+
+/*portfolio industry dropdown*/
+.nav-portfolio-industry .search,
+.nav-portfolio-industry .search-industry {
+    display: block;
+}
+
+/*portfolio clients dropdown*/
+.nav-portfolio-clients .search,
+.nav-portfolio-clients .search-clients {
+    display: block;
+}
+
+/*portfolio effects dropdown*/
+.nav-portfolio-effects .search,
+.nav-portfolio-effects .search-effects {
+    display: block;
+}
+
+.search li {
+    line-height: 1;
+    float: none;
+    width: 110px;
+}
+
+.search a:hover {
+    color: #669999;    
+}
+
+.search a:active { 
+    color: #000;
+}
+
+.search .active-secondary {
+    color: #669999;    
+}
+
+.search .active-tertiary {
+    color: #000;    
+}
+
+
+.search-industry {
+    margin: 3em 0 0 0;
+}
+
+.search-clients {
+    margin: 2em 0 0 0;
+}
+
+.search-effects {
+    margin: 1em 0 0 0;
+}
+
+.search-industry a,
+.search-clients a,
+.search-effects a {
+    color: #669999; 
+}
+
+.search-industry a:hover,
+.search-clients a:hover,
+.search-effects a:hover {
+    color: #000; 
+}
+
+.search-industry a:active,
+.search-clients a:active,
+.search-effects a:active {
+    color: #669999; 
+}
+
+.twr-credit {
+    font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-transform: uppercase; 
+    font-size: 8px;
+    color: #000;
+    position: absolute;
+    right: 1em;
+    top: 0.7em;
+    padding: 0.4em;
+    -webkit-transition: all 0.3s ease-out; 
+       -moz-transition: all 0.3s ease-out; 
+         -o-transition: all 0.3s ease-out; 
+            transition: all 0.3s ease-out; 
+}
+
+.twr-credit:hover {
+    color: #669999;
+}
+
+
+/*Footer*/
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 175px; 
+}
+
+#body-home footer {
+    position: fixed!important;
+}
+
+.touch #body-home footer {
+    display: block!important;
+}
+
+footer li {
+  float: left;
+  margin-right: 0.625em; /* 10/16 */
+}
+
+.nav-footer {
+    float: left;
+    margin: 7em 0 0 1.4375em;
+}
+
+.nav-blog a {
+    font-family: 'Knockout-HTF29-JuniorLiteweight';
+    font-size: 1.0625em; /* 17/16 */     
+    text-transform: uppercase;    
+    text-align: right;    
+    width: 162px;
+    height: 38px;    
+    display: inline-block;
+    padding: 0.84em 1.25em 0 0; /* /16 20/16 */    
+    background: url('../img/nav-large.svg') no-repeat center center;
+}
+
+.no-inlinesvg .nav-blog a { 
+    background: url('../img/nav-large.png') no-repeat center center;
+}
+
+.nav-blog a:hover {
+    background: url('../img/nav-large.svg') no-repeat top center;
+    padding: 0.57em 0.875em 0 0; /* 11/16 14/16 */    
+}
+
+.no-inlinesvg .nav-blog a:hover {
+    background: url('../img/nav-large.png') no-repeat top center;
+}
+
+.nav-blog a:active {
+    background: url('../img/nav-large.svg') no-repeat bottom center;
+    color: #fff;    
+}
+
+.no-inlinesvg .nav-blog a:active {
+    background: url('../img/nav-large.png') no-repeat bottom center;
+}
+
+.nav-social a {
+    text-align: right;    
+    width: 38px;
+    height: 38px;    
+    display: inline-block;
+    padding: 0.9em 1.25em 0 0;   
+    background: url('../img/nav-social-large.svg') no-repeat center center;
+}
+
+.no-inlinesvg .nav-social a { 
+    background: url('../img/nav-social-large.png') no-repeat center center;
+}
+
+.nav-social a:hover {
+    background: url('../img/nav-social-large.svg') no-repeat top center;
+    padding: 0.6em 0.875em 0 0; /* 11/16 14/16 */    
+}
+
+.no-inlinesvg .nav-social a:hover {
+    background: url('../img/nav-social-large.png') no-repeat top center;
+}
+
+.nav-social a:active {
+    background: url('../img/nav-social-large.svg') no-repeat bottom center;
+    color: #fff;    
+}
+
+.no-inlinesvg .nav-social a:active {
+    background: url('../img/nav-social-large.png') no-repeat bottom center;
+}
+
+.icon-fb:before {
+    content: "\21";
+}
+
+.icon-tw:before {
+    content: "\22";
+}
+
+/*.icon-pt:before {
+    content: "\23";
+}*/
+
+.icon-b:before {
+    content: "\24";
+}
+
+.icon-tw {
+    padding-left: 0.5em;
+}
+
+.icon-pt {
+    padding-left: 0.48em;
+}
+
+.crossfade-wrapper {
+    margin-right: 2em;
+    float: right;
+}
+
+#portfolio_cycler {
+    position: relative;
+    width: 150px;
+    height: 175px;
+}
+
+#portfolio_cycler img {
+    position: absolute; 
+    z-index: 1;  
+}
+
+#portfolio_cycler img.active {
+    z-index: 3;
+}
+
+
+/* ==========================================================================
+   Home
+   ========================================================================== */
+
+.bg-home {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;     
+}
+
+.js .bg-home {
+    display: none;
+}
+
+.p-one {
+    background: url('../img/p-home-1.jpg') no-repeat center center fixed;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.p-two {
+    background: url('../img/p-home-2.jpg') no-repeat center center fixed;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.p-three {
+    background: url('../img/p-home-3.jpg') no-repeat center center fixed;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.p-four {
+    background: url('../img/p-home-4.jpg') no-repeat center center fixed;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.p-five {
+    background: url('../img/p-home-5.jpg') no-repeat center center fixed;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.p-six {
+    background: url('../img/p-home-6.jpg') no-repeat center center fixed;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.p-seven {
+    background: url('../img/p-home-7.jpg') no-repeat center center fixed;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.p-eight {
+    background: url('../img/p-home-8.jpg') no-repeat center center fixed;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.p-nine {
+    background: url('../img/p-home-9.jpg') no-repeat center center fixed;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.touch .p-nine {
+    display: block !important;
+}
+
+.touch .p-one,
+.touch .p-two,
+.touch .p-three,
+.touch .p-four,
+.touch .p-five,
+.touch .p-six,
+.touch .p-seven,
+.touch .p-eight {
+    display: none !important;
+}
+
+
+/* ==========================================================================
+   Portfolio
+   ========================================================================== */
+
+.portfolio {
+    margin: 5em 0 0 12.4em;
+}
+
+/*disable the dialog box that appears on touch devices when you press and hold
+the navigation arrows.*/
+.kill-long-press {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+.slider {
+    position: relative;
+    zoom: 1;
+}
+
+.slider img {
+    border-left: 1px solid #ccc;
+}
+
+.slider li:first-child img {
+    border-left: 1px solid #fff;
+}
+
+.slider-nav {
+    zoom: 1;
+    margin-top: 10px;
+    position: relative;
+}
+
+.arrow {
+    zoom: 1;
+    position: absolute;
+    top: -0.2em;  
+}
+
+.arrow a {
+    zoom: 1;
+    display: block;
+    padding: 0.3em;
+    -webkit-transition: all 0.3s ease-out; 
+       -moz-transition: all 0.3s ease-out; 
+         -o-transition: all 0.3s ease-out; 
+            transition: all 0.3s ease-out;                             
+}
+
+.arrow a:hover {
+    color: #669999;    
+}
+
+.arrow a:active {
+    color: #000;    
+}
+
+.icon-next:before {
+    content: "\25";
+}
+
+.icon-back:before {
+    content: "\26";
+}
+
+.arrow-right {
+    left: 4.2em;
+}
+
+#count {
+    font-family: 'Knockout-HTF29-JuniorLiteweight';
+    font-size: 1.125em;
+    position: absolute;
+    left: 1.2em;
+    width: 2.8em;
+    text-align: center;
+}
+
+.touch #count {
+    display: none;
+}
+
+.slider-mask {
+    overflow: hidden;
+    position: relative;
+    zoom: 1;
+}
+
+.slider-target {
+    width: 2000px;
+}
+
+.slider li {
+    width: 830px;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   Show Reel
+   ========================================================================== */
+
+.show-reel {
+    margin: 5% 0 0 12.6em;    
+    max-width: 1250px;
+}
+
+.show-reel-video {
+    width: 80%;
+    position: relative;
+    z-index: 999;    
+}
+
+.show-reel iframe {
+    border: 2px solid #000;    
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+
+/* ==========================================================================
+   Studio
+   ========================================================================== */
+
+.studio {
+    margin: 6% 0 0 12.4em;
+}
+
+.studio-left,
+.studio-right {
+    float: left;
+}
+
+.studio-left {
+    margin-right: 13%;  
+}
+
+
+/* ==========================================================================
+   Clients
+   ========================================================================== */
+
+.clients {
+    margin: 8% 0 0 12.4em;
+}
+
+.clients aside,
+.clients ul {
+    float: left;
+    margin-right: 5%;
+}
+
+.clients li {
+    line-height: 1.1;
+    font-size: 1.0625em; /*17/16*/
+}
+
+.client-list-two {
+    margin-top: 1.375em;
+}
+
+.clients .agencies {
+    margin: 0 0 0 1em;
+}
+
+.clients span {
+    font-size: 0.9em;    
+}
+
+
+/* ==========================================================================
+   Awards
+   ========================================================================== */
+
+.awards {
+    margin: 8% 0 0 12.4em;
+}
+
+.awards aside {
+    margin: 0 9% 5% 0;
+}
+
+.awards aside,
+.awards ul {
+    float: left;
+}
+
+.awards li {
+    line-height: 1.1;
+    font-size: 1.0625em; /*17/16*/
+}
+
+.awards span {
+    font-size: 0.9em;    
+}
+
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.contact {
+    margin: 8% 0 0 12.4em;
+    position: relative;
+}
+
+.contact a {
+    -webkit-transition: all 0.3s ease-out; 
+       -moz-transition: all 0.3s ease-out; 
+         -o-transition: all 0.3s ease-out; 
+            transition: all 0.3s ease-out;      
+}
+
+.contact a:hover {
+    color: #669999;
+}
+
+.contact aside {
+    margin-bottom: 1.6em; /*30/16*/
+}
+
+.contact-left,
+.contact-right {
+    float: left;
+}
+
+.contact-left {
+    margin-right: 17.33333%;
+}
+
+.contact p {
+    margin: 0;
+}
+
+.address {
+    margin-bottom: 0.6em;
+}
+
+.address span {
+    font-size: 1em;     
+}
+
+.toll-free {
+    margin: 0.7em 0 1em 0;   
+}
+
+.map-toggle {
+    border-bottom: 2px solid #000;
+    padding: 2px 5px 2px 2px;
+    font-size: 0.875em; /*14/16*/   
+}
+
+.map-toggle:active {
+    color: #fff;
+    background: #000;
+    padding: 2px 5px 2px 4px;
+}
+
+.map-toggle-active {
+    color: #fff;
+    background: #000;
+    padding: 2px 5px 2px 4px;
+    font-size: 0.875em; /*14/16*/     
+}
+
+/*.map iframe {
+    width: 590px; 
+    height: 480px;    
+}*/
+
+.map {
+    border: 1px solid #ccc;
+    width: 590px; 
+    height: 480px;    
+    position: absolute;
+    top: 0;
+    left: -40em;
+    zoom: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;   
+    -webkit-transition: all 0.3s ease-out; 
+       -moz-transition: all 0.3s ease-out; 
+         -o-transition: all 0.3s ease-out; 
+            transition: all 0.3s ease-out;    
+}
+
+.map img {
+    max-width: none;    
+}
+
+.map-active {
+    position: absolute;
+    top: 0;
+    left: 15em;
+    margin-left: 5%;
+    zoom: 1;
+    filter: alpha(opacity=100);
+    opacity: 1;
+}  
+
+.contact-right h2 {
+    margin-bottom: 0.25em;
+}
+
+.rep {
+    margin-bottom: 0.6em;
+}
+
+.rep-contact {
+    margin-bottom: 1.5em;  
+}
+
+
+/* ==========================================================================
+   Behind The Scenes
+   ========================================================================== */
+
+.behind-the-scenes {
+    margin: 5% 0 0 12em;
+    width: 80%;
+}
+
+.behind-the-scenes ul {
+    max-width: 75.75em;
+}
+
+.behind-the-scenes li {
+    float: left;
+    margin: 0.6%;
+    width: 20%;
+}
+
+
+/* ==========================================================================
+   Countdown
+   ========================================================================== */
+
+.countdown-body {
+    background: #000;
+}
+
+.countdown-bg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;     
+    background: #000 url('../img/p-countdown-temp.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.countdown {
+    position: fixed;
+    bottom: 17%;
+    right: 6%;
+    font-family: 'Knockout-HTF29-JuniorLiteweight';
+    -webkit-transition: all 0.2s ease;
+    -moz-transition:    all 0.2s ease;
+    -ms-transition:     all 0.2s ease;
+    -o-transition:      all 0.2s ease;    
+}
+
+.countdown a {
+    color: #fff;
+    font-size: 0.75em; /* 12/16 */
+}
+
+.countdown a:hover {
+    text-decoration: underline;
+}
+
+.launch-cube {
+    width: 206px;
+    height: 31px;
+    background: url('../img/countdown-cube.svg') no-repeat center center;
+}
+
+.clock {
+    margin: 0.9em 0 1em 0;
+}
+
+.clock p {
+    float: left;
+    margin: 0;    
+    font-size: 95px;
+    color: #808080;
+    line-height: 0.77;
+}
+
+.clock span {
+    font-size: 95px;
+    color: #fff; 
+    line-height: 0.77;
+}
+
+.space {
+    float: left;
+}
+
+.clock br {
+    clear: left;
+}   
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/*Med*/
+
+@media only screen and (max-width: 1080px) {
+
+    /*Global*/
+
+    p {
+        font-size: 0.9375em; 
+    }
+
+    h2 {
+        font-size: 1.25em; 
+    }
+    
+    h3 {
+        font-size: 0.9375em;
+    }    
+ 
+    /*Main Nav*/
+
+    nav a {
+        font-size: 0.9375em; /* 15/16 */     
+    }
+
+    .cube-nav { 
+        width: 136px;
+        height: 32px;
+        margin-right: 0.3125em; /* 5/16 */    
+        padding: 0.8em 1.2em 0 0; /* /16 20/16 */    
+        background: url('../img/nav-small.svg') no-repeat center center;
+    }
+
+    .no-inlinesvg .cube-nav {    
+        background: url('../img/nav-small.png') no-repeat center center;
+    }    
+    
+    .cube-nav:hover {
+        background: url('../img/nav-small.svg') no-repeat top center;
+        padding: 0.5em 0.875em 0 0; /* 8/16 14/16 */    
+    }
+
+    .no-inlinesvg .cube-nav:hover {
+        background: url('../img/nav-small.png') no-repeat top center;
+    }    
+
+    .cube-nav:active {
+        background: url('../img/nav-small.svg') no-repeat bottom center;
+    }
+
+    .no-inlinesvg .cube-nav:active {
+        background: url('../img/nav-small.png') no-repeat bottom center;
+    }    
+
+    nav .active,
+    .nav-footer .active {
+        background: url('../img/nav-small.svg') no-repeat bottom center;
+        padding: 0.5em 0.875em 0 0; /* 8/16 14/16 */   
+    }
+
+    .no-inlinesvg nav .active,
+    .no-inlinesvg .nav-footer .active {
+        background: url('../img/nav-small.png') no-repeat bottom center;
+    }    
+
+    nav .active:hover,
+    .nav-footer .active:hover {
+        background: url('../img/nav-small.svg') no-repeat bottom center;
+    }
+
+    .no-inlinesvg nav .active:hover,
+    .no-inlinesvg .nav-footer .active:hover {
+        background: url('../img/nav-small.png') no-repeat bottom center;
+    }
+
+    .search-toggle {
+        padding-right: 2.275em;
+    }
+
+    .search-toggle:hover{
+        padding-right: 1.9em;
+    }
+
+    nav .active.search-toggle {
+        padding-right: 1.9em;  
+    }    
+
+    nav b {
+        border-width: 6px 6px 0 6px;
+        top: 1.2em;
+        left: 7.1em;    
+    }
+
+    nav a:hover b {
+        top: 1em;
+        left: 7.44em;     
+    }
+
+    nav .active b {
+        top: 1em;
+        left: 7.44em;     
+    }   
+
+    /*Secondary Nav*/    
+
+    .search {
+        margin: 0.1em 0 0 3.2em;
+    }  
+
+    .search-industry {
+        margin: 2.1em 0 0 0;
+    }
+
+    .search-clients {
+        margin: 1.2em 0 0 0;
+    }
+
+    .search-effects {
+        margin: 0.2em 0 0 0;
+    }
+
+    .search li {
+        width: 90px;
+        line-height: 0.95;
+    }         
+
+    /*Footer*/
+
+    footer {
+        height: 150px;
+    }    
+
+    footer li {
+      margin-right: 0.3125em; /* 5/16 */
+    }
+
+    .nav-footer {
+        margin-top: 5.7em;
+    }    
+
+    .nav-blog a {
+        font-size: 0.9375em; /* 15/16 */     
+        width: 136px;
+        height: 32px;    
+        padding: 0.8em 1.2em 0 0; /* /16 20/16 */    
+        background: url('../img/nav-small.svg') no-repeat center center;
+    }
+
+    .no-inlinesvg .nav-blog a { 
+        background: url('../img/nav-small.png') no-repeat center center;
+    }    
+
+    .nav-blog a:hover {
+        background: url('../img/nav-small.svg') no-repeat top center;
+        padding: 0.5em 0.875em 0 0; /* 8/16 14/16 */    
+    }
+
+    .no-inlinesvg .nav-blog a:hover {
+        background: url('../img/nav-small.png') no-repeat top center;
+    }    
+
+    .nav-blog a:active {
+        background: url('../img/nav-small.svg') no-repeat bottom center;   
+    }
+
+    .no-inlinesvg .nav-blog a:active {
+        background: url('../img/nav-small.png') no-repeat bottom center;   
+    }    
+
+    .nav-social a { 
+        width: 32px;
+        height: 32px;    
+        padding: 0.7em 1.1em 0 0;   
+        background: url('../img/nav-social-small.svg') no-repeat center center;
+    }
+
+    .no-inlinesvg .nav-social a { 
+        background: url('../img/nav-social-small.png') no-repeat center center;
+    }    
+
+    .nav-social a:hover {
+        background: url('../img/nav-social-small.svg') no-repeat top center;
+        padding: 0.5em 0.875em 0 0; /* 11/16 14/16 */    
+    }
+
+    .no-inlinesvg .nav-social a:hover {
+        background: url('../img/nav-social-small.png') no-repeat top center;
+    }    
+
+    .nav-social a:active {
+        background: url('../img/nav-social-small.svg') no-repeat bottom center;
+    }
+
+    .no-inlinesvg .nav-social a:active {
+        background: url('../img/nav-social-small.png') no-repeat bottom center;
+    }    
+
+    [class^="icon-"]:before, [class*=" icon-"]:before {
+        font-size: 0.8em;
+    }    
+
+    .icon-tw {
+        padding-left: 0.45em;
+    }
+
+    .icon-pt {
+        padding-left: 0.38em;
+    }                 
+
+    .nav-social a:hover .icon-pt {
+        padding-left: 0.6em;
+    }
+
+
+    #portfolio_cycler {
+        width: 125px;
+        height: 150px;
+    }
+
+
+    /* ==========================================================================
+       Portfolio Med
+       ========================================================================== */
+
+    .portfolio {
+        margin: 5% 0 0 10.6em;
+    }
+
+    .slider-nav {
+        margin-top: 5px;
+    }
+
+    .arrow a {
+        font-size: 1.5em;                         
+    }
+
+    #count {
+        top: 0.5em;
+        left: 1.4em; 
+    }
+
+
+
+    /* ==========================================================================
+       Show Reel Med
+       ========================================================================== */
+
+    .show-reel {
+        margin: 5% 0 0 10.6em;    
+    }
+
+    .show-reel-video {
+        width: 75%;
+    }
+
+
+    /* ==========================================================================
+       Studio Med
+       ========================================================================== */
+
+    .studio {
+        margin: 5% 0 0 10.6em;
+    }
+
+    .studio-left {
+        margin-right: 8%;  
+    }
+
+    /* ==========================================================================
+       Clients Med
+       ========================================================================== */
+
+    .clients {
+        margin: 5% 0 0 10.6em;
+    }
+
+    .clients aside,
+    .clients ul {
+        margin-right: 3%;
+    }
+
+    .clients li {
+        font-size: 0.9375em; 
+    }
+
+    .client-list-two {
+        margin-top: 1.2em;
+    }
+    
+    .clients span {
+        font-size: 0.775em;    
+    }
+
+
+    /* ==========================================================================
+       Awards Med
+       ========================================================================== */
+
+    .awards {
+        margin: 5% 0 0 10.6em;
+    }
+
+    .awards aside,
+    .awards ul {
+        float: none;
+    }    
+
+    .awards aside {
+        margin: 0 0 5% 0;
+    }
+
+    .awards li {
+        font-size: 0.9375em;
+    }
+
+    .awards span {
+        font-size: 0.775em;    
+    }
+
+    /* ==========================================================================
+       Contact Med
+       ========================================================================== */
+
+    .contact {
+        margin: 5% 0 0 10.6em;
+    }
+
+    .map-toggle {
+        font-size: 0.75em;   
+    }
+
+    .map-toggle:hover {
+        color: #000;
+    }
+
+    .map-toggle:active {
+        color: #000;
+        background: #fff;
+    }
+
+    .map-toggle-active {
+        font-size: 0.75em;     
+    }
+
+    .map-toggle-active:hover {
+        color: #fff;
+    }
+
+    .map {
+        width: 410px; 
+        height: 400px;    
+    }
+
+
+    /* ==========================================================================
+       Behind The Scenes Med
+       ========================================================================== */
+
+    .behind-the-scenes {
+        margin: 5% 0 0 10.6em;
+        width: 70%;
+    }   
+
+
+}
+/*end med mq*/
+
+
+/*Small*/
+
+@media only screen and (max-width: 880px) {
+
+    h2,
+    h3,
+    p {
+        padding-right: 3em;
+    }    
+
+    /*Main Nav*/    
+
+    nav {
+        width: 450px;
+    }
+
+    nav a {
+        margin-bottom: 0.4em;
+    }
+
+    .search {
+        margin: 2.5em 0 0 3.2em;
+    }
+
+    .search a {
+        margin: 0;
+    }
+
+    footer {
+        position: static;
+        margin-top: 5%; 
+    }
+    
+
+    /* ==========================================================================
+       Portfolio Small
+       ========================================================================== */
+
+    .slider img {
+        border-left: none;
+    }
+
+
+    /* ==========================================================================
+       Studio Small
+       ========================================================================== */    
+
+    .studio br {
+        display: none;
+    }
+
+    /* ==========================================================================
+       Clients Small
+       ========================================================================== */
+
+    .clients aside {
+        float: none;
+        margin-bottom: 5%;
+    }
+
+    .clients .agencies {
+        float: none;
+        clear: both;
+        margin: 0;
+        padding: 3% 0 0 0;
+    }
+
+
+    /* ==========================================================================
+       Awards Small
+       ========================================================================== */
+
+    .awards li {
+        padding: 0 3em 0.3em 0;        
+    }
+
+
+    /* ==========================================================================
+       Contact Small
+       ========================================================================== */
+
+    .contact-left,
+    .contact-right {
+        float: none;
+    }
+
+    .contact-left {
+        margin-bottom: 2em;
+    }
+
+    .map {
+        top: 18em;
+        left: -40em;
+    }
+
+    .map-active {
+        top: 18em;
+        left: 0;
+        margin-left: 0;
+    }         
+
+ 
+}
+/*end small mq*/
+
+
+/*Footer Max Height*/
+
+@media only screen and (max-height: 900px) {
+
+    footer {
+        position: static;
+        margin-top: 5%; 
+    }
+
+}
+/*end max height mq*/
+
+
+/*Mobile*/
+
+@media only screen and (max-width: 750px) {
+
+    /*Global Mobile*/
+
+    br {
+        display: none;
+    }
+
+    .hyphen {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+    }    
+
+    /*Mobile Toggle*/   
+
+    .mobile-toggle {
+        font-size: 0.9375em; /* 15/16 */
+        text-align: right;    
+        width: 136px;
+        height: 32px;
+        display: block;
+        margin: 1em 0 0 1.4375em;    
+        padding: 0.7em 1.2em 0 0; /* /16 20/16 */    
+        background: url('../img/nav-small.svg') no-repeat center center;
+    }
+
+    .no-inlinesvg .mobile-toggle {   
+        background: url('../img/nav-small.png') no-repeat center center;
+    }    
+
+    .mobile-toggle:hover {
+        background: url('../img/nav-small.svg') no-repeat top center;
+        padding: 0.5em 0.875em 0 0; /* 8/16 14/16 */    
+    }
+
+    .no-inlinesvg .mobile-toggle:hover {
+        background: url('../img/nav-small.png') no-repeat top center;
+    }    
+
+    .mobile-toggle:active {
+        background: url('../img/nav-small.svg') no-repeat bottom center;
+        color: #fff;    
+    }
+
+    .no-inlinesvg .mobile-toggle:active {
+        background: url('../img/nav-small.png') no-repeat bottom center;
+    }    
+
+    /*Main Nav Mobile*/
+
+    .nav-main {
+        display: none;
+        font-size: 0.9375em; /* 15/16 */        
+        margin: 0;
+        padding-bottom: 0.5em;
+        position: relative;
+        z-index: 3;
+        background: #fff;
+        border-bottom: 1px solid #000;
+    }
+
+    .nav-main li {
+      float: none; 
+    }
+
+    .cube-nav {
+        text-align: left;    
+        width: 100%;
+        height: 20px;    
+        padding: 0 0 0 5.5em;
+        margin: 0;     
+        background: none;
+    }
+
+    .cube-nav:hover {
+        background: none;
+        padding: 0 0 0 5.5em;
+        color: #669999;
+    }
+
+    .cube-nav:active {
+        background: none;
+        color: #000;   
+    }
+
+    .nav-main .active {
+        background: none;
+        padding: 0 0 0 5.5em;
+        color: #000;   
+    }
+
+    .nav-main .active:hover {
+        background: none;
+        color: #000;
+    }
+
+    nav b {
+        top: 0.4em;
+        left: 9.4em;
+        border-width: 4px 4px 0 4px;    
+    }
+
+    nav a:hover b {
+        top: 0.4em;
+        left: 9.4em;    
+    }
+
+    nav .active b {
+        top: 0.4em;
+        left: 9.4em;
+        border-width: 4px 4px 0 4px;
+        border-color: #000 transparent transparent transparent;
+        -webkit-transform: rotate(0deg); 
+           -moz-transform: rotate(0deg); 
+            -ms-transform: rotate(0deg); 
+             -o-transform: rotate(0deg); 
+                transform: rotate(0deg);             
+    }                   
+
+    /*Secondary Nav Mobile*/
+
+    .search,
+    .search-industry,
+    .search-clients,
+    .search-effects {
+        display: none;
+        margin-top: 0;
+        position: static;
+        background: none;
+    }
+
+    /*portfolio industry dropdown*/
+    .nav-portfolio-industry .search,
+    .nav-portfolio-industry .search-industry {
+        display: none;
+    }
+
+    /*portfolio clients dropdown*/
+    .nav-portfolio-clients .search,
+    .nav-portfolio-clients .search-clients {
+        display: none;
+    }
+
+    /*portfolio effects dropdown*/
+    .nav-portfolio-effects .search,
+    .nav-portfolio-effects .search-effects {
+        display: none;
+    }    
+
+    .search {
+        padding-left: 2.5em;
+    }
+
+    /*remove fade main content on dropdown*/
+    .main-fade {
+        zoom: 1;
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }    
+
+    .search li {
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+
+    .search a {
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+
+    .search .active-secondary {
+        color: #000;    
+    }
+
+    .search .active-tertiary {
+        color: #699;    
+    }                 
+
+    .search-industry,
+    .search-clients,
+    .search-effects {
+        padding-left: 0.6em;
+    }
+
+    .twr-credit {
+        font-size: 5px;
+    }
+
+
+    /*Footer Mobile*/
+
+    footer {
+        height: 100px;
+    }
+
+    .nav-footer {
+        margin-top: 3.4em;
+    }    
+
+    /*Remove cube bg nav footer*/
+    .nav-blog a,
+    .nav-social a,
+    .nav-footer .active {
+        background: none;
+        padding: 0.1875em;
+        margin: 0;    
+        color: #000;
+        width: auto;
+        height: auto;    
+    }
+
+    .nav-blog a:hover,
+    .nav-social a:hover,
+    .nav-footer .active:hover {
+        background: none;
+        padding: 0.1875em;
+        color: #669999;    
+    }
+
+    .nav-blog a {
+        padding-top: 0.3em!important;
+    }
+
+    .icon-tw {
+        padding: 0;
+    }
+
+    .crossfade-wrapper {
+        margin-right: 0.2em;
+    }
+
+    #portfolio_cycler {
+        width: 75px;
+        height: 100px;
+    }
+
+
+    /* ==========================================================================
+       Portfolio Mobile
+       ========================================================================== */
+
+    .portfolio {
+        margin: 5% 1.4375em 0 1.4375em;
+    }    
+
+
+    /* ==========================================================================
+       Show Reel Mobile
+       ========================================================================== */
+
+    .show-reel {
+        margin: 5% 0 0 1.4375em;    
+    }
+
+    .show-reel-video {
+        width: 90%;
+    }
+
+
+    /* ==========================================================================
+       Studio Mobile
+       ========================================================================== */
+
+    .studio {
+        margin: 5% 0 0 1.4375em;    
+    }
+
+
+    /* ==========================================================================
+       Clients Mobile
+       ========================================================================== */
+
+    .clients {
+        margin: 5% 0 0 1.4375em;
+    }
+
+
+    /* ==========================================================================
+       Awards Mobile
+       ========================================================================== */
+
+    .awards {
+        margin: 5% 0 0 1.4375em;
+    }
+
+    .awards li {
+        padding: 0 3em 0.7em 0;        
+    }    
+
+
+    /* ==========================================================================
+       Contact Mobile
+       ========================================================================== */
+
+    .contact {
+        margin: 5% 0 0 1.4375em;
+    }
+
+    .map {
+        width: 265px; 
+        height: 410px;    
+    }
+           
+
+    /* ==========================================================================
+       Behind The Scenes Mobile
+       ========================================================================== */
+
+    .behind-the-scenes {
+        margin: 5% 0 0 1.4375em;
+        width: 100%;
+    }        
+
+
+}
+/*end mobile mq*/
+
+
+@media only screen and (min-width: 751px) {
+    
+    .nav-main {
+        display: block !important;
+    }     
+
+}
+
+
+
+/* ==========================================================================
+   Media Queries - Countdown
+   ========================================================================== */
+
+@media only screen and (min-width: 1900px) {
+    .countdown {
+        right: 13%;
+        bottom: 15%;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .countdown {
+        right: 2%;
+        bottom: 22%;
+    }
+
+    .clock p {
+        font-size: 75px;
+    }
+
+    .clock span {
+        font-size: 75px;
+    }            
+}
+
+@media only screen and (max-width: 650px) {
+    .countdown-bg {
+        opacity: 0.3;
+        background: #000 url('../img/p-countdown-temp-small.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .countdown {
+        right: 50%;
+        bottom: 50%;
+        margin-right: -135px;
+        margin-bottom: -85px;
+    }
+    .clock p {
+        font-size: 55px;
+    }
+
+    .clock span {
+        font-size: 55px;
+    }         
+}
+
+
+/* Style adjustments for viewports that meet the condition */
+/*@media only screen and (min-width: 35em) {
+}*/
+
+/* Style adjustments for high resolution devices */
+/*@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+}*/
+
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

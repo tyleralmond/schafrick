@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="161px" height="114px" viewBox="0 0 161 114" enable-background="new 0 0 161 114" xml:space="preserve">
+<g>
+	<g>
+		<rect x="0.955" y="51.001" fill="#FFFFFF" width="148.314" height="23.999"/>
+		<polyline fill="none" stroke="#000000" stroke-width="2" points="0.955,51.001 149.27,51.001 149.27,75 		"/>
+	</g>
+	<g>
+		<polygon fill="none" stroke="#000000" stroke-width="2" points="11.73,39 0.955,51.001 0.955,75 149.27,75 160.045,62.999 
+			160.045,39 		"/>
+	</g>
+	<line fill="none" stroke="#000000" stroke-width="2" x1="160.045" y1="39" x2="149.27" y2="51.001"/>
+</g>
+<g>
+	<g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#000000" stroke-width="2" points="5.697,85.001 154.012,85.001 154.012,109 				"/>
+			</g>
+			<g>
+				<polygon fill="none" stroke="#000000" stroke-width="2" points="11.73,77.742 5.697,85.001 5.697,109 154.012,109 
+					160.045,101.741 160.045,77.742 				"/>
+			</g>
+			<line fill="none" stroke="#000000" stroke-width="2" x1="160.045" y1="77.742" x2="154.012" y2="85.001"/>
+		</g>
+	</g>
+	<rect x="5.697" y="85.001" width="148.314" height="23.999"/>
+</g>
+<g>
+	<g>
+		<polyline fill="none" stroke="#000000" stroke-width="2" points="5.697,8.426 154.012,8.426 154.012,32.425 		"/>
+		<polygon fill="none" stroke="#000000" stroke-width="2" points="11.73,1.167 5.697,8.426 5.697,32.425 154.012,32.425 
+			160.045,25.166 160.045,1.167 		"/>
+	</g>
+	<line fill="none" stroke="#000000" stroke-width="2" x1="160.045" y1="2.167" x2="154.012" y2="9.426"/>
+</g>
+</svg>
